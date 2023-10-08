@@ -18,6 +18,14 @@ namespace FileExplorer.Files {
     /// FilesControl.xaml에 대한 상호 작용 논리
     /// </summary>
     public partial class FilesControl : UserControl {
+
+        public FileModel File {
+            get => this.DataContext as FileModel;
+            set => this.DataContext = value;
+        }
+
+        public Action<FileModel> NavigateToPathCallback { get; set; }
+
         public FilesControl() {
             InitializeComponent();
         }

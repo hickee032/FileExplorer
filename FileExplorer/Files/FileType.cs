@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace FileExplorer.Files {
-    internal class FileType {
+    public enum FileType {
+
+        File, Folder, Drive,
+        Shortcut
     }
 }

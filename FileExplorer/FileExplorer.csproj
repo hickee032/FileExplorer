@@ -57,11 +57,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converters\IconTolmageConverter.cs" />
     <Compile Include="Files\FileModel.cs" />
     <Compile Include="Files\FilesControl.xaml.cs">
       <DependentUpon>FilesControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Files\FileType.cs" />
+    <Compile Include="Helpers\IconHelper.cs" />
     <Compile Include="Themes\ColourfulDarkTheme.xaml.cs">
       <DependentUpon>ColourfulDarkTheme.xaml</DependentUpon>
     </Compile>
