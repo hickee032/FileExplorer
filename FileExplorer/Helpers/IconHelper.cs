@@ -28,9 +28,15 @@ namespace FileExplorer.Helpers
                 IntPtr.Zero,
                 Int32Rect.Empty,
                 BitmapSizeOptions.FromEmptyOptions());
+
+            if (!DeleteObject(hBitmap)) {
+
+                MessageBox.Show("사용하지 않는 비트맵 개체를 삭제하지 못했습니다.");
+            }
+
+            return image;
         }
 
         #endregion
-
     }
 }
