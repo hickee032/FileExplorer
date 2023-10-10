@@ -15,3 +15,15 @@ C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\Themes\LightThem
 C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\App.g.cs
 C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\FileExplorer_MarkupCompile.cache
 C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\FileExplorer_MarkupCompile.lref
+C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\App.baml
+C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\MainWindow.baml
+C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\FileExplorer.exe
+C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\FileExplorer.pdb
+C:\Users\bluep\source\repos\FileExplorer\FileExplorer\bin\Debug\FileExplorer.exe.config
+C:\Users\bluep\source\repos\FileExplorer\FileExplorer\bin\Debug\FileExplorer.exe
+C:\Users\bluep\source\repos\FileExplorer\FileExplorer\bin\Debug\FileExplorer.pdb
+C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\Files\FilesControl.baml
+C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\FileExplorer.g.resources
+C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\FileExplorer.Properties.Resources.resources
+C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\FileExplorer.csproj.GenerateResource.cache
+C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\FileExplorer.csproj.CoreCompileInputs.cache
