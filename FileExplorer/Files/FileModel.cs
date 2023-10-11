@@ -20,6 +20,7 @@ namespace FileExplorer.Files {
         public DateTime DateModified { get; set; }
 
         public FileType Type { get; set; }
+        public long SizeBytes { get; set; }
 
         public bool IsFile => Type == FileType.File;
         public bool IsFolder => Type == FileType.Folder;

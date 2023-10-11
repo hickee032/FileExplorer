@@ -28,6 +28,12 @@ namespace FileExplorer.Files {
 
         public FilesControl() {
             InitializeComponent();
+            File= new FileModel();
+        }
+
+        public FilesControl(FileModel fModel) {
+            InitializeComponent();
+            File= fModel;
         }
     }
 }

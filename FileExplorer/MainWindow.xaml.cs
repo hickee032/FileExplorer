@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FileExplorer.Files;
+using FileExplorer.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,8 +20,28 @@ namespace FileExplorer {
     /// MainWindow.xaml에 대한 상호 작용 논리
     /// </summary>
     public partial class MainWindow : Window {
+
+        public MainViewModel Model {
+
+            get=>this.DataContext as MainViewModel;
+            set => this.DataContext = value;
+        }
+
         public MainWindow() {
+
             InitializeComponent();
+
+            FileModel fModel = new FileModel() {
+                Name = "test file.txt",
+                Path = "idk",
+                DateCreated= DateTime.Now,
+                DateModified= DateTime.Now,
+                Type = FileType.File,
+                SizeBytes= 2194242,
+            };
+
+            FilesControl fc = new FilesControl(fModel);
+            Model.AddFile(fc);
         }
     }
 }

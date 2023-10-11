@@ -27,3 +27,4 @@ C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\FileExplorer.g.r
 C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\FileExplorer.Properties.Resources.resources
 C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\FileExplorer.csproj.GenerateResource.cache
 C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\FileExplorer.csproj.CoreCompileInputs.cache
+C:\Users\bluep\source\repos\FileExplorer\FileExplorer\obj\Debug\GeneratedInternalTypeHelper.g.cs

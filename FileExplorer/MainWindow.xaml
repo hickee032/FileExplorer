@@ -4,12 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FileExplorer"
+        xmlns:viewmodels="clr-namespace:FileExplorer.ViewModels"
         mc:Ignorable="d"
         Title="MainWindow" 
         Height="720" Width="1280"
         Style="{DynamicResource CustomWindowStyle}">
-
+    <Window.DataContext>
+        <viewmodels:MainViewModel/>
+    </Window.DataContext>
     <Grid>
-        
+        <ListBox ItemsSource="{Binding FileItems, UpdateSourceTrigger=PropertyChanged}"
+                 HorizontalContentAlignment="Stretch"/>
     </Grid>
 </Window>
