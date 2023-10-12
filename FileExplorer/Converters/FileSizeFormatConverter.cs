@@ -20,6 +20,11 @@ namespace FileExplorer.Converters
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
             
             if(value is long size) {
+
+                if(size == long.MaxValue) {
+                    return "-";
+                }
+
                 StringBuilder sb = new StringBuilder(20);
                 strFormatByteSize(size, sb, 20);
                 return sb.ToString();
