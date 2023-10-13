@@ -40,8 +40,9 @@ namespace FileExplorer {
                 SizeBytes= 2194242,
             };
 
-            FilesControl fc = new FilesControl(fModel);
-            Model.AddFile(fc);
+            Model.AddFile(new FilesControl(fModel));
+            Model.AddFile(new FilesControl(fModel));
+            Model.AddFile(new FilesControl(fModel));
         }
     }
 }

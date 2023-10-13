@@ -12,7 +12,7 @@ namespace FileExplorer.Converters
     public class FileSizeFormatConverter : IValueConverter
     {
         [DllImport("Shlwapi.dll", CharSet = CharSet.Auto)]
-        private static extern int strFormatByteSize(
+        private static extern int StrFormatByteSize(
             long fileSize,
             [MarshalAs(UnmanagedType.LPTStr)] StringBuilder buffer, 
             int bufferSize);
@@ -21,12 +21,11 @@ namespace FileExplorer.Converters
             
             if(value is long size) {
 
-                if(size == long.MaxValue) {
+                if(size == long.MaxValue)
                     return "-";
-                }
 
                 StringBuilder sb = new StringBuilder(20);
-                strFormatByteSize(size, sb, 20);
+                StrFormatByteSize(size, sb, 20);
                 return sb.ToString();
             }
             return "-";

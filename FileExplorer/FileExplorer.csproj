@@ -74,6 +74,8 @@
     </ApplicationDefinition>
     <Compile Include="Converters\FileSizeFormatConverter.cs" />
     <Compile Include="Converters\IconTolmageConverter.cs" />
+    <Compile Include="Explorer\ExplorerHelpers.cs" />
+    <Compile Include="Explorer\Fetcher.cs" />
     <Compile Include="Files\FileModel.cs" />
     <Compile Include="Files\FilesControl.xaml.cs">
       <DependentUpon>FilesControl.xaml</DependentUpon>
@@ -184,8 +186,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Explorer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
