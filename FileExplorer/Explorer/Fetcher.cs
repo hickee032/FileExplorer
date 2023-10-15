@@ -47,18 +47,18 @@ namespace FileExplorer.Explorer
             catch (IOException io) {
                 MessageBox.Show(
                     $"IO Exception getting files in directory: {io.Message}",
-                    "Exception getting files in directory");
+                    "디렉터리에서 파일을 가져오는 중 예외가 발생했습니다.");
             }
             catch (UnauthorizedAccessException noAccess) {
                 MessageBox.Show(
                     $"No access for a file: {noAccess.Message}",
-                    "Exception getting files in directory");
+                    "디렉터리에서 파일을 가져오는 중 예외가 발생했습니다.");
             }
             catch (Exception e) {
                 MessageBox.Show(
                     $"Failed to get files in '{directory}' || " +
                     $"Something to do with '{currentFile}'\n" +
-                    $"Exception: {e.Message}", "Error");
+                    $"Exception: {e.Message}", "오류");
             }
 
             return files;
