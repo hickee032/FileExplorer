@@ -1,4 +1,5 @@
-﻿using FileExplorer.Files;
+﻿using FileExplorer.Explorer;
+using FileExplorer.Files;
 using FileExplorer.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -31,18 +32,17 @@ namespace FileExplorer {
 
             InitializeComponent();
 
-            FileModel fModel = new FileModel() {
-                Name = "test file.txt",
-                Path = "idk",
-                DateCreated= DateTime.Now,
-                DateModified= DateTime.Now,
-                Type = FileType.File,
-                SizeBytes= 2194242,
-            };
+            foreach (FileModel folder in Fetcher.GetDirectories(@"D:\testfolder")) {
 
-            Model.AddFile(new FilesControl(fModel));
-            Model.AddFile(new FilesControl(fModel));
-            Model.AddFile(new FilesControl(fModel));
+                FilesControl fc = new FilesControl(folder);
+                Model.AddFile(fc);
+            }
+
+            foreach(FileModel file in Fetcher.GetFiles(@"D:\testfolder")) {
+
+                FilesControl fc = new FilesControl(file);
+                Model.AddFile(fc);
+            }
         }
     }
 }
