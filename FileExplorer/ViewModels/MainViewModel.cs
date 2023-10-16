@@ -1,4 +1,5 @@
-﻿using FileExplorer.Files;
+﻿using FileExplorer.Explorer;
+using FileExplorer.Files;
 using NamespaceHere;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,26 @@ namespace FileExplorer.ViewModels {
             FileItems = new ObservableCollection<FilesControl>();
         }
 
+        #region Navigation
+
+        public void TryNavigateToPath(string path) {
+
+            if(path == string.Empty) {
+                ClearFiles();
+
+                foreach(FileModel drive in Fetcher.GetDrives()) {
+
+
+                }
+            }
+
+        }
+        public void NavigateFromModel(FileModel file) {
+            TryNavigateToPath(file.Path);
+        }
+
+        #endregion
+
         public void AddFile(FilesControl file) {
             FileItems.Add(file);
         }
@@ -25,6 +46,16 @@ namespace FileExplorer.ViewModels {
         }
         public void ClearFiles() {
             FileItems.Clear();
+        }
+        public FilesControl CreateFileControl(FileModel fModel) {
+
+            FilesControl fc = new FilesControl(fModel);
+            SetupFileControlCallbacks(fc);
+            return fc;
+        }
+
+        public void SetupFileControlCallbacks(FilesControl fc) {
+            fc.NavigateToPathCallback = NavigateFromModel;
         }
     }
 }

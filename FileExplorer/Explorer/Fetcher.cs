@@ -87,7 +87,7 @@ namespace FileExplorer.Explorer
                         DateCreated = dInfo.CreationTime,
                         DateModified = dInfo.LastWriteTime,
                         Type = FileType.Folder,
-                        SizeBytes = 0
+                        SizeBytes = long.MaxValue
                     };
 
                     directories.Add(dModel);
@@ -131,6 +131,39 @@ namespace FileExplorer.Explorer
             }
 
             return directories;
+        }
+
+        public static List<FileModel> GetDrives() {
+            List<FileModel> drives = new List<FileModel>();
+
+            try {
+
+                foreach (string drive in Directory.GetLogicalDrives()) {
+                    DriveInfo dInfo = new DriveInfo(drive);
+
+                    FileModel dModel = new FileModel() {
+                        Icon = IconHelper.GetIconOfFile(drive, true, true),
+                        Name = dInfo.Name,
+                        Path = dInfo.Name,
+                        DateModified = DateTime.Now,
+                        Type = FileType.Drive,
+                        SizeBytes = dInfo.TotalSize
+                    };
+
+                    drives.Add(dModel);
+                }
+
+                return drives;
+            }
+
+            catch (IOException io) {
+                MessageBox.Show($"IO Exception getting drives: {io.Message}", "Exception getting drives");
+            }
+            catch (UnauthorizedAccessException noAccess) {
+                MessageBox.Show($"No access for a hard drive: {noAccess.Message}", "");
+            }
+
+            return drives;
         }
     }
 
