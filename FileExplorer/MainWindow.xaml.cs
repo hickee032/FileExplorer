@@ -32,17 +32,7 @@ namespace FileExplorer {
 
             InitializeComponent();
 
-            foreach (FileModel folder in Fetcher.GetDirectories(@"D:\testfolder")) {
-
-                FilesControl fc = new FilesControl(folder);
-                Model.AddFile(fc);
-            }
-
-            foreach(FileModel file in Fetcher.GetFiles(@"D:\testfolder")) {
-
-                FilesControl fc = new FilesControl(file);
-                Model.AddFile(fc);
-            }
+            Model.TryNavigateToPath(@"D:\testfolder");
         }
     }
 }

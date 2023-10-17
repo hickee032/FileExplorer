@@ -27,8 +27,31 @@ namespace FileExplorer.ViewModels {
 
                 foreach(FileModel drive in Fetcher.GetDrives()) {
 
+                    FilesControl fc = CreateFileControl(drive);
+                    AddFile(fc);
 
                 }
+            }
+
+            else if (path.IsFile()) {
+
+            }
+            else if (path.IsDirectory()) {
+                ClearFiles();
+
+                foreach(FileModel dir in Fetcher.GetDirectories(path)) {
+                    FilesControl fc = CreateFileControl(dir);
+                    AddFile(fc);
+                }
+
+                foreach(FileModel file in Fetcher.GetDirectories(path)) {
+                    FilesControl fc = CreateFileControl(file);
+                    AddFile(fc);
+                }
+            }
+
+            else {
+
             }
 
         }
