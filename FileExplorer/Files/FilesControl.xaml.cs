@@ -35,5 +35,18 @@ namespace FileExplorer.Files {
             InitializeComponent();
             File= fModel;
         }
+
+        private void Grid_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e) {
+            if(e.ChangedButton == MouseButton.Left && 
+               e.LeftButton == MouseButtonState.Pressed &&
+               e.ClickCount == 2) {
+                NavigateToPathCallback?.Invoke(File);
+            }
+        }
+
+
+        private void UserControl_KeyDown(object sender, System.Windows.Input.KeyboardEventArgs e) {
+        
+        }
     }
 }

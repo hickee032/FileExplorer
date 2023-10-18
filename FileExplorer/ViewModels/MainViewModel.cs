@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace FileExplorer.ViewModels {
 
@@ -35,6 +36,8 @@ namespace FileExplorer.ViewModels {
 
             else if (path.IsFile()) {
 
+                MessageBox.Show($"Opening{path}");
+
             }
             else if (path.IsDirectory()) {
                 ClearFiles();
@@ -44,7 +47,7 @@ namespace FileExplorer.ViewModels {
                     AddFile(fc);
                 }
 
-                foreach(FileModel file in Fetcher.GetDirectories(path)) {
+                foreach(FileModel file in Fetcher.GetFiles(path)) {
                     FilesControl fc = CreateFileControl(file);
                     AddFile(fc);
                 }
